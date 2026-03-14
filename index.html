@@ -91,5 +91,103 @@ return Math.round(score);
 
 console.log(finalScore({"right":60,"wrong":20,"skip":10}));
     </h2>
+    <h2>
+        //Problem-04: Upcoming Gono Vote
+
+function gonoVote(votes) {
+
+if(!Array.isArray(votes)){
+
+return "Invalid";
+
+}
+
+let haCount = 0;
+
+let naCount = 0;
+
+for(let vote of votes){
+
+if(vote === 'ha'){
+
+haCount++;
+
+}
+
+else if(vote === 'na'){
+
+naCount++;
+
+}
+
+}
+
+if(haCount > naCount){
+
+return true;
+
+}
+
+else if(haCount === naCount){
+
+return 'equal';
+
+}
+
+else{
+
+return false;
+
+}
+
+
+}
+
+console.log(gonoVote(["ha", "na", "ha"]))
+    </h2>
+
+    <h2>
+        /Problem-05: Text Analyzer for an AI Company
+
+function analyzeText(text) {
+
+if (typeof text !== 'string'|| text.trim().length === 0) {
+
+return 'Invalid';
+
+}
+
+let words = text.split(" ");
+
+let longestWord = "";
+
+for (let word of words) {
+
+if (word.length > longestWord.length) {
+
+longestWord = word;
+
+}
+
+}
+
+let totalLetter = 0;
+
+for (let char of text) {
+
+if (char !== ' ') {
+
+totalLetter++;
+
+}
+
+}
+
+return { longwords: longestWord, token: totalLetter };
+
+}
+
+console.log(analyzeText("I love programming very much"));
+    </h2>
 </body>
 </html>
