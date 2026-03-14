@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        My Submission
+Submitted At: 11:55 PM, 9th Feb - 2026
+    </h1>
+    <h2>
+        //Problem-01: New Price for Eid Sale
+
+function newPrice(currentPrice,discount){
+
+if (typeof currentPrice !== "number" || typeof discount !== "number") {
+
+return "Invalid";
+
+}
+
+if (discount < 0 || discount > 100) {
+
+return "Invalid";
+
+}
+
+let pricewithdiscount =currentPrice-currentPrice*discount/100;
+
+return pricewithdiscount.toFixed(3);
+
+}
+
+console.log(newPrice(2000,20));
+
+
+    </h2>
+ 
+    <h2>
+   //Problem-02: OTP Validation for Zapshift
+
+function newPrice(currentPrice,discount){
+
+if (typeof currentPrice !== "number" || typeof discount !== "number") {
+
+return "Invalid";
+
+}
+
+if (discount < 0 || discount > 100) {
+
+return "Invalid";
+
+}
+
+let pricewithdiscount =currentPrice-currentPrice*discount/100;
+
+return pricewithdiscount.toFixed(3);
+
+}
+
+    </h2>
+
+
+    <h2>
+        //Problem-03: BCS Final Score Calculator
+
+function finalScore(input) {
+
+if (!input || typeof input !== "object" || !("right" in input) || !("wrong" in input) || !("skip" in input)){
+
+return "Invalid"
+
+}
+
+let total = input.right + input.wrong + input.skip ;
+
+if(total !== 100){
+
+return "Invalid"
+
+}
+
+let score =input.right - input.wrong * 0.5;
+
+return Math.round(score);
+
+}
+
+console.log(finalScore({"right":60,"wrong":20,"skip":10}));
+    </h2>
+</body>
+</html>
